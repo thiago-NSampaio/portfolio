@@ -1,3 +1,11 @@
+import { Header } from "./components/Header";
+import { Home } from "./components/Home";
+
 export function App() {
-  return <h1>Profile</h1>;
+  return (
+    <>
+      <Header />
+      <Home />
+    </>
+  );
 }

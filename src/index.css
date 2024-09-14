@@ -1,3 +1,19 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+* {
+  min-width: 0;
+}
+/* global.css */
+::-webkit-scrollbar {
+  height: 6px; /* Diminui a altura da barra de rolagem horizontal */
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px; /* Arredonda os cantos do thumb da barra de rolagem */
+}
+
+::-webkit-scrollbar-button {
+  display: none; /* Remove as setas */
+}
