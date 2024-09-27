@@ -1,24 +1,24 @@
 import { MenuIcon, X } from "lucide-react";
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
 import { Link } from "react-scroll";
 
 export function NavBar({ isDesktop }: { isDesktop: boolean }) {
-  const [toggleMenu, setToggleMenu] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   function openMenu() {
-    setToggleMenu(true);
+    setIsMenuOpen(true);
   }
 
-  // Fechar o menu quando mudar o tamanho da tela para desktop
+  function closeMenu() {
+    setIsMenuOpen(false);
+  }
+
   useEffect(() => {
-    if (isDesktop) {
-      setToggleMenu(false);
-    }
+    setIsMenuOpen(false);
   }, [isDesktop]);
 
   return (
     <>
-      {/* Ícone de menu para dispositivos móveis */}
       {!isDesktop && (
         <MenuIcon
           onClick={openMenu}
@@ -26,13 +26,14 @@ export function NavBar({ isDesktop }: { isDesktop: boolean }) {
         />
       )}
 
-      {/* Menu de navegação */}
       <ul
         className={
           isDesktop
             ? "flex flex-row space-x-5 text-xl text-zinc-300"
-            : `grid grid-cols-2 fixed top-0 py-16 w-full bg-black h-lvh text-white text-xl sm:text-2xl transition-transform duration-300 space-y-0 ${
-                toggleMenu ? "translate-x-0" : "-translate-x-full"
+            : `${
+                isMenuOpen
+                  ? "transition-transform grid grid-cols-2 fixed top-0 py-16 w-full bg-black h-lvh text-white text-xl sm:text-2xl duration-300 space-y-0 translate-x-0"
+                  : "hidden"
               }`
         }
       >
@@ -50,7 +51,7 @@ export function NavBar({ isDesktop }: { isDesktop: boolean }) {
               spy={true}
               smooth={true}
               duration={500}
-              onClick={() => setToggleMenu(false)}
+              onClick={closeMenu}
             >
               Home
             </Link>
@@ -63,7 +64,7 @@ export function NavBar({ isDesktop }: { isDesktop: boolean }) {
               spy={true}
               smooth={true}
               duration={500}
-              onClick={() => setToggleMenu(false)}
+              onClick={closeMenu}
             >
               Sobre
             </Link>
@@ -76,7 +77,7 @@ export function NavBar({ isDesktop }: { isDesktop: boolean }) {
               spy={true}
               smooth={true}
               duration={500}
-              onClick={() => setToggleMenu(false)}
+              onClick={closeMenu}
             >
               Projetos
             </Link>
@@ -89,7 +90,7 @@ export function NavBar({ isDesktop }: { isDesktop: boolean }) {
               spy={true}
               smooth={true}
               duration={500}
-              onClick={() => setToggleMenu(false)}
+              onClick={closeMenu}
             >
               Certificados
             </Link>
@@ -102,7 +103,7 @@ export function NavBar({ isDesktop }: { isDesktop: boolean }) {
               spy={true}
               smooth={true}
               duration={500}
-              onClick={() => setToggleMenu(false)}
+              onClick={closeMenu}
             >
               Contato
             </Link>
@@ -110,11 +111,10 @@ export function NavBar({ isDesktop }: { isDesktop: boolean }) {
         </div>
 
         {/* Ícone de fechar no canto superior direito para dispositivos móveis */}
-
         {!isDesktop && (
           <div className="border-t">
             <X
-              onClick={() => setToggleMenu(false)}
+              onClick={closeMenu}
               className="cursor-pointer absolute top-[70px] md:size-8 right-4 text-white "
             />
           </div>

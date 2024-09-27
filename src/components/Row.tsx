@@ -1,27 +1,29 @@
 import { ReactNode } from "react";
-import { useRef } from "react";
-import { useDraggable } from "react-use-draggable-scroll";
+import { Swiper } from "swiper/react";
+import { Autoplay } from "swiper/modules";
+import "swiper/css";
 
 interface RowProps {
   children: ReactNode;
-  arr: number[];
+  speed?: number;
 }
 
-export function Row({ arr, children }: RowProps) {
-  const ref =
-    useRef<HTMLDivElement>() as React.MutableRefObject<HTMLInputElement>;
-  const { events } = useDraggable(ref);
+export function Row({ children, speed = 2500 }: RowProps) {
   return (
-    <div
-      className="pt-4 flex overflow-x-auto scrollbar-hide space-x-5"
-      {...events}
-      ref={ref}
+    <Swiper
+      loop={true} // Garante o loop infinito
+      modules={[Autoplay]}
+      autoplay={{
+        delay: speed, // Tempo entre transições
+        disableOnInteraction: false, // Não desabilita ao interagir
+        pauseOnMouseEnter: true, // Pausa ao passar o mouse
+      }}
+      grabCursor={true} // Mostra o cursor de "pegar" para uma melhor UX
+      spaceBetween={30} // Espaço entre os itens
+      slidesPerView={"auto"} // Ajuste dinâmico do número de slides visíveis
+      centeredSlides={true} // Centraliza os slides
     >
-      {arr.map((item) => (
-        <div className="inline-flex flex-shrink-0" key={item}>
-          {children}
-        </div>
-      ))}
-    </div>
+      {children}
+    </Swiper>
   );
 }
