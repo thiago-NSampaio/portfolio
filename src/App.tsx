@@ -1,11 +1,13 @@
+import { Footer } from "./components/Footer";
 import { Header } from "./components/Header";
-import { Home } from "./components/Home";
+import { Portfolio } from "./components/Portfolio";
 
 export function App() {
   return (
     <>
       <Header />
-      <Home />
+      <Portfolio />
+      <Footer />
     </>
   );
 }

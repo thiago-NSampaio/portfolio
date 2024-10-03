@@ -6,7 +6,7 @@ export function Profile() {
   const saudation = getSaudation();
   return (
     <Element
-      className=" mb-16 bg-opacity-95 w-full h-full bg-gradient-to-b rounded-xl from-zinc-900 to-zinc-950"
+      className="mb-16 bg-opacity-95 w-full h-full bg-gradient-to-b from-zinc-900 to-zinc-950"
       name="home"
     >
       <div className="flex flex-col mt-36 md:mt-64 justify-center items-center md:flex-row ">

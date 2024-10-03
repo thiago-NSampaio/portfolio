@@ -11,17 +11,17 @@ interface RowProps {
 export function Row({ children, speed = 2500 }: RowProps) {
   return (
     <Swiper
-      loop={true} // Garante o loop infinito
+      loop={true}
       modules={[Autoplay]}
       autoplay={{
-        delay: speed, // Tempo entre transições
-        disableOnInteraction: false, // Não desabilita ao interagir
-        pauseOnMouseEnter: true, // Pausa ao passar o mouse
+        delay: speed,
+        disableOnInteraction: false,
+        pauseOnMouseEnter: true,
       }}
-      grabCursor={true} // Mostra o cursor de "pegar" para uma melhor UX
-      spaceBetween={30} // Espaço entre os itens
-      slidesPerView={"auto"} // Ajuste dinâmico do número de slides visíveis
-      centeredSlides={true} // Centraliza os slides
+      grabCursor={true}
+      spaceBetween={30}
+      slidesPerView={"auto"}
+      centeredSlides={true}
     >
       {children}
     </Swiper>

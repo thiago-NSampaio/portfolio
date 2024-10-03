@@ -8,16 +8,13 @@ export function Certificate() {
       {certificates.map((certificate) => (
         <SwiperSlide
           key={certificate.id}
-          className="flex max-w-md overflow-hidden py-5"
+          className="flex max-w-md overflow-hidden"
         >
-          <div
-            key={certificate.id}
-            className="rounded-xl flex" // Ajuste de overflow
-          >
+          <div key={certificate.id} className="rounded-xl h-72 flex">
             <img
               src={certificate.src}
               alt={certificate.name}
-              className="object-cover object-top rounded-xl"
+              className="object-cover w-full h-full object-top rounded-xl"
               draggable={false}
             />
           </div>

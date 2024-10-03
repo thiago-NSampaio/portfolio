@@ -39,78 +39,77 @@ export function NavBar({ isDesktop }: { isDesktop: boolean }) {
       >
         <div
           className={
-            isDesktop ? "space-y-0 inline-flex" : "space-y-5 border-t px-3"
+            isDesktop
+              ? "space-y-0 inline-flex"
+              : "flex flex-col space-y-5 border-t px-3"
           }
         >
-          {/* Links do menu */}
-          <li className="p-2 transition ease-in-out hover:-translate-y-1 duration-300">
-            <Link
-              to="home"
-              className="home"
-              activeClass="text-teal-400 shadow-lg"
-              spy={true}
-              smooth={true}
-              duration={500}
-              onClick={closeMenu}
-            >
-              Home
-            </Link>
-          </li>
-          <li className="p-2 transition ease-in-out hover:-translate-y-1 duration-300">
-            <Link
-              to="about"
-              className="about"
-              activeClass="text-teal-400 shadow-lg"
-              spy={true}
-              smooth={true}
-              duration={500}
-              onClick={closeMenu}
-            >
-              Sobre
-            </Link>
-          </li>
-          <li className="p-2 transition ease-in-out hover:-translate-y-1 duration-300">
-            <Link
-              to="projects"
-              className="projects"
-              activeClass="text-teal-400 shadow-lg"
-              spy={true}
-              smooth={true}
-              duration={500}
-              onClick={closeMenu}
-            >
-              Projetos
-            </Link>
-          </li>
-          <li className="p-2 transition ease-in-out hover:-translate-y-1 duration-300">
-            <Link
-              to="certificates"
-              className="certificates"
-              activeClass="text-teal-400 shadow-lg"
-              spy={true}
-              smooth={true}
-              duration={500}
-              onClick={closeMenu}
-            >
-              Certificados
-            </Link>
-          </li>
-          <li className="p-2 transition ease-in-out hover:-translate-y-1 duration-300">
-            <Link
-              to="contact"
-              className="contact"
-              activeClass="text-teal-400 shadow-lg"
-              spy={true}
-              smooth={true}
-              duration={500}
-              onClick={closeMenu}
-            >
-              Contato
-            </Link>
-          </li>
+          <Link
+            to="home"
+            className="p-2 transition ease-in-out hover:-translate-y-1 duration-300"
+            activeClass="text-teal-400 shadow-lg"
+            spy={true}
+            smooth={true}
+            duration={500}
+            onClick={closeMenu}
+            offset={-116}
+          >
+            Home
+          </Link>
+
+          <Link
+            to="about"
+            className="p-2 transition ease-in-out hover:-translate-y-1 duration-300"
+            activeClass="text-teal-400 shadow-lg"
+            spy={true}
+            smooth={true}
+            duration={500}
+            onClick={closeMenu}
+            offset={-116}
+          >
+            Sobre
+          </Link>
+
+          <Link
+            to="projects"
+            className="p-2 transition ease-in-out hover:-translate-y-1 duration-300"
+            activeClass="text-teal-400 shadow-lg"
+            spy={true}
+            smooth={true}
+            duration={500}
+            onClick={closeMenu}
+            offset={-116}
+          >
+            Projetos
+          </Link>
+
+          <Link
+            to="certificates"
+            className="p-2 transition ease-in-out hover:-translate-y-1 duration-300"
+            activeClass="text-teal-400 shadow-lg"
+            spy={true}
+            smooth={true}
+            duration={500}
+            onClick={closeMenu}
+            offset={-116}
+          >
+            Certificados
+          </Link>
+
+          <Link
+            to="contact"
+            className="p-2 transition ease-in-out hover:-translate-y-1 duration-300"
+            activeClass="text-teal-400 shadow-lg"
+            spy={true}
+            smooth={true}
+            duration={500}
+            onClick={closeMenu}
+            offset={-116}
+          >
+            Contato
+          </Link>
         </div>
 
-        {/* Ícone de fechar no canto superior direito para dispositivos móveis */}
         {!isDesktop && (
           <div className="border-t">
             <X

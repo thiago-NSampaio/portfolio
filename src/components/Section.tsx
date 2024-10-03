@@ -10,9 +10,9 @@ interface SectionProps {
 
 export function Section({ children, subtitle, name, title }: SectionProps) {
   return (
-    <Element className="mb-16 px-6" name={name}>
+    <Element className="mb-32 px-6" name={name}>
       <h2 className="text-2xl font-bold text-zinc-400">{title}</h2>
-      <h3 className="text-lg">{subtitle}</h3>
+      <h3 className="text-lg mb-3">{subtitle}</h3>
       {children}
     </Element>
   );

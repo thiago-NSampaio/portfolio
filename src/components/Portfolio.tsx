@@ -5,20 +5,21 @@ import { InstagramLogo } from "phosphor-react";
 import { Certificate } from "./Certificate";
 import { Projects } from "./Projects";
 import { Row } from "./Row";
+import { Mail, Phone } from "lucide-react";
 
-export function Home() {
+export function Portfolio() {
   return (
-    <div className="items-center  text-white flex flex-col">
+    <div className="items-center text-white flex flex-col">
       <Profile />
-      <div className="w-full max-w-7xl">
+      <div className="w-full h-full max-w-7xl">
         <Section
           name="about"
           title="Sobre"
-          subtitle=" Sou um desenvolvedor web em início de carreira com forte interesse
+          subtitle="Sou um desenvolvedor web em início de carreira com forte interesse
             em programação para web. Tenho 1 ano e 6 meses de experiência em
             desenvolvimento front-end, com foco em HTML, CSS, JavaScript e PHP."
         >
-          <p className="items-center py-2 px-2">
+          <p className="items-center">
             <a href="https://skillicons.dev">
               <img
                 className="cursor-default"
@@ -48,8 +49,10 @@ export function Home() {
           title="Contato"
           subtitle="Entre em contato comigo."
         >
-          <div className="flex items-center justify-center space-x-3">
-            <InstagramLogo className="size-16" />
+          <div className="flex items-center justify-center pt-3 -mb-7 space-x-5">
+            <InstagramLogo className="size-10" />
+            <Mail className="size-10" />
+            <Phone className="size-10" />
           </div>
         </Section>
       </div>
