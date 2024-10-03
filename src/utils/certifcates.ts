@@ -21,12 +21,12 @@ export const certificates: Certificate[] = [
     src: "certificates/Iniciante-programacao-alura.jpeg",
   },
   {
-    id: "sf332",
+    id: "342422",
     name: "python fundamentos-dsa",
     src: "certificates/python-fundamentos-dsa.jpeg",
   },
   {
-    id: "sf332",
+    id: "5464",
     name: "java jdk-curso",
     src: "certificates/java-jdk-curso.jpeg",
   },
