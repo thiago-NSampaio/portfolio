@@ -11,7 +11,7 @@ interface RowProps {
 export function Row({ children, speed = 2500 }: RowProps) {
   return (
     <Swiper
-      loop={true}
+      loop={false}
       modules={[Autoplay]}
       autoplay={{
         delay: speed,

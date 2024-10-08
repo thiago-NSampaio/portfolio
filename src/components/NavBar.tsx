@@ -29,7 +29,7 @@ export function NavBar({ isDesktop }: { isDesktop: boolean }) {
       <ul
         className={
           isDesktop
-            ? "flex flex-row space-x-5 text-xl text-zinc-300"
+            ? "flex flex-row space-x-5 text-lg text-zinc-300"
             : `${
                 isMenuOpen
                   ? "transition-transform grid grid-cols-2 fixed top-0 py-16 w-full bg-black h-lvh text-white text-xl sm:text-2xl duration-300 space-y-0 translate-x-0"

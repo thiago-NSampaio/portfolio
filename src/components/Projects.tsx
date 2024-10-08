@@ -30,13 +30,13 @@ export function Projects() {
   }, []);
 
   return (
-    <Row>
+    <Row speed={3500}>
       {projects.map((project) => (
         <SwiperSlide
           key={project.id}
-          className="flex w-full md:max-w-sm gap-x-6 overflow-hidden overflow-x-auto"
+          className="flex w-full max-w-sm overflow-hidden overflow-x-auto"
         >
-          <div className="px-3 py-2 flex flex-col bg-gradient-to-r items-center from-neutral-800 to-neutral-900 h-[560px] max-w-sm rounded-xl overflow-hidden">
+          <div className="px-3 py-2 flex flex-col bg-gradient-to-r items-center from-neutral-800 to-neutral-900  max-w-sm rounded-xl overflow-hidden h-[520px]">
             <div className="flex justify-between mt-2 font-bold">
               <h3 className="text-xl text-start">{project.name}</h3>
             </div>

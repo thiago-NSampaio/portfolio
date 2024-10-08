@@ -11,7 +11,7 @@ export function Portfolio() {
   return (
     <div className="items-center text-white flex flex-col">
       <Profile />
-      <div className="w-full h-full max-w-7xl">
+      <div className="w-full px-3 h-full md:max-w-[1230px]">
         <Section
           name="about"
           title="Sobre"
