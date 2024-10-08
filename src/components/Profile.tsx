@@ -22,14 +22,25 @@ export function Profile() {
             desenvolvedor web.
           </p>
           <div className="flex py-8 space-x-5 md:ml-5 items-center">
-            <button className="flex gap-2 rounded-md border-2 px-6 py-2 border-zinc-500 text-zinc-500 text-lg hover:text-blue-300 hover:border-blue-500">
+            <a
+              href="http://linkedin.com/in/thiago-nascimentos/"
+              className="flex gap-2 rounded-md border-2 px-6 py-2 border-zinc-500 text-zinc-500 text-lg hover:text-blue-300 hover:border-blue-500"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <Linkedin className="size-6" />
               Linkedin
-            </button>
-            <button className="flex gap-2 rounded-md border-2 px-6 py-2 border-zinc-500 text-zinc-500 text-lg hover:text-white hover:border-white">
+            </a>
+
+            <a
+              href="http://github.com/thiago-NSampaio/"
+              className="flex gap-2 rounded-md border-2 px-6 py-2 border-zinc-500 text-zinc-500 text-lg hover:text-white hover:border-white"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <Github className="size-6" />
-              GitHub
-            </button>
+              Github
+            </a>
           </div>
         </div>
       </div>

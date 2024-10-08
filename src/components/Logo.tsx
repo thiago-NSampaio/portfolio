@@ -1,7 +1,7 @@
 export function Logo() {
   return (
     <div
-      className="pl-2 font-bold text-xl md:text-3xl"
+      className="pl-2 font-bold text-xl md:text-2xl"
       style={{
         animation: `shadowMove 1s ease-in-out infinite`,
         animationDirection: "alternate-reverse",

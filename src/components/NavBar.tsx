@@ -22,7 +22,7 @@ export function NavBar({ isDesktop }: { isDesktop: boolean }) {
       {!isDesktop && (
         <MenuIcon
           onClick={openMenu}
-          className="cursor-pointer absolute md:top-10 right-4 md:size-8 text-white"
+          className="cursor-pointer absolute md:top-8 right-4 md:size-8 text-white"
         />
       )}
 
@@ -33,15 +33,15 @@ export function NavBar({ isDesktop }: { isDesktop: boolean }) {
             : `${
                 isMenuOpen
                   ? "transition-transform grid grid-cols-2 fixed top-0 py-16 w-full bg-black h-lvh text-white text-xl sm:text-2xl duration-300 space-y-0 translate-x-0"
-                  : "hidden"
+                  : "invisible"
               }`
         }
       >
         <div
           className={
             isDesktop
-              ? "space-y-0 inline-flex"
-              : "flex flex-col space-y-5 border-t px-3"
+              ? "space-y-0 inline-flex *:hover:cursor-pointer"
+              : "flex flex-col space-y-5 border-t px-3 *:hover:cursor-pointer"
           }
         >
           <Link

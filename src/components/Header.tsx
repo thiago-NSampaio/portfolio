@@ -7,7 +7,7 @@ export function Header() {
 
   return (
     <header
-      className={`fixed border-b border-zinc-500 h-16 md:h-[116px] z-50 flex w-full items-center justify-between bg-black ${isDesktop ? "md:px-10" : ""}`}
+      className={`fixed border-b border-zinc-500 h-16 md:h-24 z-50 flex w-full items-center justify-between bg-black ${isDesktop ? "md:px-10" : ""}`}
     >
       <Logo />
       <NavBar isDesktop={isDesktop} />

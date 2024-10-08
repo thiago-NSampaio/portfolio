@@ -21,7 +21,7 @@ export function Row({ children, speed = 2500 }: RowProps) {
       grabCursor={true}
       spaceBetween={30}
       slidesPerView={"auto"}
-      centeredSlides={true}
+      centeredSlides={false}
     >
       {children}
     </Swiper>

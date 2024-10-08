@@ -8,7 +8,7 @@ export function Certificate() {
       {certificates.map((certificate) => (
         <SwiperSlide
           key={certificate.id}
-          className="flex max-w-md overflow-hidden"
+          className="flex max-w-sm overflow-hidden"
         >
           <div key={certificate.id} className="rounded-xl h-72 flex">
             <img
