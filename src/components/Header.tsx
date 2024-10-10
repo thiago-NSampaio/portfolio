@@ -3,7 +3,7 @@ import { NavBar } from "./NavBar";
 import { useMediaQuery } from "react-responsive";
 
 export function Header() {
-  const isDesktop = useMediaQuery({ minWidth: 860 });
+  const isDesktop = useMediaQuery({ minWidth: 1024 });
 
   return (
     <header

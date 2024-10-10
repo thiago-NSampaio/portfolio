@@ -21,7 +21,6 @@ export function Projects() {
     api
       .get("/projects")
       .then((res) => {
-        console.log(res.data);
         setProjects(res.data);
       })
       .catch((error) => {
@@ -30,7 +29,7 @@ export function Projects() {
   }, []);
 
   return (
-    <Row speed={3500}>
+    <Row speed={5000}>
       {projects.map((project) => (
         <SwiperSlide
           key={project.id}
@@ -70,7 +69,7 @@ export function Projects() {
             </div>
 
             <div className="flex py-2">
-              <ul className="flex flex-wrap gap-y-2 gap-1.5 *:bg-black *:text-center *:px-3.5 *:py-1 *:border *:border-zinc-950 *:rounded-xl">
+              <ul className="flex flex-wrap gap-y-2 gap-1.5 *:bg-black *:text-center *:px-2.5 *:text-sm *:md:text-base md:*:px-3.5 *:py-1 *:border *:border-zinc-950 *:rounded-xl">
                 {project.techs.map((tech) => {
                   return (
                     <li

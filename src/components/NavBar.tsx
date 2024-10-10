@@ -52,7 +52,7 @@ export function NavBar({ isDesktop }: { isDesktop: boolean }) {
             smooth={true}
             duration={500}
             onClick={closeMenu}
-            offset={-116}
+            offset={isDesktop ? -100 : -70}
           >
             Home
           </Link>
@@ -65,7 +65,7 @@ export function NavBar({ isDesktop }: { isDesktop: boolean }) {
             smooth={true}
             duration={500}
             onClick={closeMenu}
-            offset={-116}
+            offset={isDesktop ? -100 : -70}
           >
             Sobre
           </Link>
@@ -78,7 +78,7 @@ export function NavBar({ isDesktop }: { isDesktop: boolean }) {
             smooth={true}
             duration={500}
             onClick={closeMenu}
-            offset={-116}
+            offset={isDesktop ? -100 : -70}
           >
             Projetos
           </Link>
@@ -91,7 +91,7 @@ export function NavBar({ isDesktop }: { isDesktop: boolean }) {
             smooth={true}
             duration={500}
             onClick={closeMenu}
-            offset={-116}
+            offset={isDesktop ? -100 : -70}
           >
             Certificados
           </Link>
@@ -104,7 +104,7 @@ export function NavBar({ isDesktop }: { isDesktop: boolean }) {
             smooth={true}
             duration={500}
             onClick={closeMenu}
-            offset={-116}
+            offset={isDesktop ? -100 : -70}
           >
             Contato
           </Link>

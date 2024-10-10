@@ -4,14 +4,14 @@ import { Profile } from "./Profile";
 import { InstagramLogo } from "phosphor-react";
 import { Certificate } from "./Certificate";
 import { Projects } from "./Projects";
-import { Row } from "./Row";
+// import { Row } from "./Row";
 import { Mail, Phone } from "lucide-react";
 
 export function Portfolio() {
   return (
     <div className="items-center text-white flex flex-col">
       <Profile />
-      <div className="w-full px-3 h-full md:max-w-[1230px]">
+      <div className="w-full px-3 h-full md:max-w-[1260px]">
         <Section
           name="about"
           title="Sobre"
@@ -33,9 +33,9 @@ export function Portfolio() {
           title="Projetos"
           subtitle="Confira os projetos que desenvolvi que estão em produção."
         >
-          <Row>
-            <Projects />
-          </Row>
+          {/* <Row> */}
+          <Projects />
+          {/* </Row> */}
         </Section>
         <Section
           name="certificates"
