@@ -12,7 +12,7 @@
   "dependencies": {
     "@types/react-scroll": "^1.8.10",
     "axios": "^1.7.7",
-    "lucide-react": "^0.439.0",
+    "lucide-react": "^0.451.0",
     "phosphor-react": "^1.4.1",
     "portfolio": "file:",
     "profile": "file:",
