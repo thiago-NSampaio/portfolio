@@ -4,14 +4,32 @@ import { Profile } from "./Profile";
 import { InstagramLogo } from "phosphor-react";
 import { Certificate } from "./Certificate";
 import { Projects } from "./Projects";
-// import { Row } from "./Row";
+import { useState, useEffect } from "react";
 import { Mail, Phone } from "lucide-react";
+import { BackToTop } from "./BackToTop";
 
 export function Portfolio() {
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      // Verifica se o scroll é maior que 100 (ou qualquer valor mínimo desejado)
+      setIsScrolled(window.scrollY > 100);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
   return (
     <div className="items-center text-white flex flex-col">
       <Profile />
+
       <div className="w-full px-3 h-full md:max-w-[1260px]">
+        {isScrolled && <BackToTop />}
+
         <Section
           name="about"
           title="Sobre"
@@ -33,9 +51,7 @@ export function Portfolio() {
           title="Projetos"
           subtitle="Confira os projetos que desenvolvi que estão em produção."
         >
-          {/* <Row> */}
           <Projects />
-          {/* </Row> */}
         </Section>
         <Section
           name="certificates"
