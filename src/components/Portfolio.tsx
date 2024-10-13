@@ -13,7 +13,6 @@ export function Portfolio() {
 
   useEffect(() => {
     const handleScroll = () => {
-      // Verifica se o scroll é maior que 100 (ou qualquer valor mínimo desejado)
       setIsScrolled(window.scrollY > 100);
     };
 
