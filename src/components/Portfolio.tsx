@@ -32,11 +32,9 @@ export function Portfolio() {
         <Section
           name="about"
           title="Sobre"
-          subtitle="Sou um desenvolvedor web em início de carreira com forte interesse
-            em programação para web. Tenho 1 ano e 6 meses de experiência em
-            desenvolvimento front-end, com foco em HTML, CSS, JavaScript e PHP."
+          subtitle="Sou um desenvolvedor web em início de carreira, com mais de 2 anos de experiência em HTML, CSS, JavaScript e PHP. Tenho grande interesse em criar soluções web funcionais e otimizadas, sempre buscando aprender e implementar as melhores práticas do desenvolvimento front-end e back-end. Meu foco é desenvolver aplicações responsivas e dinâmicas, com atenção ao detalhe e à eficiência do código."
         >
-          <p className="items-center">
+          <p className="flex items-center justify-center">
             <a href="https://skillicons.dev">
               <img
                 className="cursor-default"
@@ -48,7 +46,7 @@ export function Portfolio() {
         <Section
           name="projects"
           title="Projetos"
-          subtitle="Confira os projetos que desenvolvi que estão em produção."
+          subtitle="Aqui estão alguns dos projetos que desenvolvi. Cada projeto reflete meu aprendizado e experiência como desenvolvedor web, com foco em criar soluções dinâmicas, funcionais e responsivas."
         >
           <Projects />
         </Section>

@@ -1,8 +1,10 @@
 import { Github, RocketIcon } from "lucide-react";
-import { api } from "../lib/axiox";
+import { api } from "../lib/axios";
 import { useEffect, useState } from "react";
 import { Row } from "./Row";
 import { SwiperSlide } from "swiper/react";
+import { IconsTechs } from "./IconsTechs";
+// import { TailwindCss } from "./icons/TailwindCss";
 
 interface Project {
   id: string;
@@ -69,13 +71,14 @@ export function Projects() {
             </div>
 
             <div className="flex py-2">
-              <ul className="flex flex-wrap gap-y-2 gap-1.5 *:bg-black *:text-center *:px-2.5 *:text-sm *:md:text-base md:*:px-3.5 *:py-1 *:border *:border-zinc-950 *:rounded-xl">
+              <ul className="flex flex-wrap gap-y-2 gap-1.5 *:bg-zinc-950 *:text-center *:px-2.5 *:text-sm *:md:text-base md:*:px-3.5 *:py-1 *:border *:border-zinc-950 *:rounded-xl">
                 {project.techs.map((tech) => {
                   return (
                     <li
                       key={tech}
-                      className="hover:shadow-md hover:shadow-teal-100 hover:cursor-default"
+                      className="flex gap-x-1.5 hover:shadow-md hover:shadow-teal-100 hover:cursor-default"
                     >
+                      {<IconsTechs tech={tech} />}
                       {tech}
                     </li>
                   );

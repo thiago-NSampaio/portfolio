@@ -1,7 +1,7 @@
 export function NodeJs() {
   return (
     <svg
-      className="w-7 h-7"
+      className="size-5 md:size-6 align-baseline"
       viewBox="0 0 24 25"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
