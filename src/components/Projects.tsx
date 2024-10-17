@@ -4,7 +4,11 @@ import { useEffect, useState } from "react";
 import { Row } from "./Row";
 import { SwiperSlide } from "swiper/react";
 import { IconsTechs } from "./IconsTechs";
-// import { TailwindCss } from "./icons/TailwindCss";
+
+type tech = {
+  name: string;
+  color: string;
+};
 
 interface Project {
   id: string;
@@ -13,11 +17,13 @@ interface Project {
   img: string;
   github: string;
   deploy: string;
-  techs: string[];
+  techs: tech[];
 }
 
 export function Projects() {
   const [projects, setProjects] = useState<Project[]>([]);
+
+  console.log(projects);
 
   useEffect(() => {
     api
@@ -71,15 +77,16 @@ export function Projects() {
             </div>
 
             <div className="flex py-2">
-              <ul className="flex flex-wrap gap-y-2 gap-1.5 *:bg-zinc-950 *:text-center *:px-2.5 *:text-sm *:md:text-base md:*:px-3.5 *:py-1 *:border *:border-zinc-950 *:rounded-xl">
+              <ul className="flex flex-wrap gap-y-2 gap-1.5 *:text-center *:px-2.5 *:text-sm *:md:text-base md:*:px-3.5 *:py-1  *:rounded-xl">
                 {project.techs.map((tech) => {
                   return (
                     <li
-                      key={tech}
-                      className="flex gap-x-1.5 hover:shadow-md hover:shadow-teal-100 hover:cursor-default"
+                      key={tech.name}
+                      className="flex gap-x-1.5 hover:shadow-md bg-zinc-950 border hover:cursor-default"
+                      style={{ borderColor: tech.color ? tech.color : "white" }}
                     >
-                      {<IconsTechs tech={tech} />}
-                      {tech}
+                      {<IconsTechs tech={tech.name} />}
+                      {tech.name}
                     </li>
                   );
                 })}
