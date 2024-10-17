@@ -8,7 +8,7 @@ import { Java } from "./icons/Java";
 import { Jest } from "./icons/Jest";
 import { Js } from "./icons/Js";
 import { MongoDB } from "./icons/MongoDB";
-import { NodeJs } from "./icons/Nodejs";
+import { NodeJs } from "./icons/nodejs";
 import { Python } from "./icons/Python";
 import { ReactJS } from "./icons/ReactJS";
 import { SpringBoot } from "./icons/SpringBoot";
