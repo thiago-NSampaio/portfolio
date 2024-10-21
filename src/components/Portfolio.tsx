@@ -2,7 +2,7 @@ import { Section } from "./Section";
 
 import { Profile } from "./Profile";
 import { InstagramLogo } from "phosphor-react";
-import { Certificate } from "./Certificate";
+import { Certificates } from "./Certificates";
 import { Projects } from "./Projects";
 import { useState, useEffect } from "react";
 import { Mail, Phone } from "lucide-react";
@@ -55,7 +55,7 @@ export function Portfolio() {
           title="Certificados"
           subtitle="Estes são os certificados que adquirem no meio tecnlógico de desenvolvimento para web."
         >
-          <Certificate />
+          <Certificates />
         </Section>
         <Section
           name="contact"

@@ -2,7 +2,7 @@ import { certificates } from "../utils/certifcates";
 import { Row } from "./Row";
 import { SwiperSlide } from "swiper/react";
 
-export function Certificate() {
+export function Certificates() {
   return (
     <Row>
       {certificates.map((certificate) => (
@@ -10,7 +10,7 @@ export function Certificate() {
           key={certificate.id}
           className="flex max-w-sm overflow-hidden"
         >
-          <div key={certificate.id} className="rounded-xl h-72 flex">
+          <div className="rounded-xl h-72 flex">
             <img
               src={certificate.src}
               alt={certificate.name}

@@ -11,20 +11,24 @@ export function Profile() {
     >
       <div className="flex flex-col mt-36 md:mt-64 justify-center items-center md:flex-row ">
         <img
-          className="flex flex-shrink-0 size-52 rounded-full border-4 p-1 border-teal-400"
+          className="flex flex-shrink-0 size-60 md:size-64 rounded-full border-4 p-1 border-teal-400"
           src="./profile.png"
           alt=""
         />
         <div className="py-5 md:px-6 md:py-0">
-          <p className="text-3xl text-justify font-bold md:text-4xl">
-            {saudation}, sou <span className="text-teal-500">Thiago</span>,
-            <br />
+          <p className="flex flex-wrap justify-center text-4xl md:block font-bold md:text-5xl">
+            {saudation}, sou{" "}
+            <span className="text-teal-500 ml-1.5 md:ml-0">
+              Thiago<span className="text-white">,</span>
+            </span>
+            <br className="hidden md:block" />
             desenvolvedor web.
           </p>
-          <div className="flex py-8 space-x-5 md:ml-5 items-center">
+
+          <div className="flex justify-center py-8 space-x-5 md:ml-5 items-center">
             <a
               href="http://linkedin.com/in/thiago-nascimentos/"
-              className="flex gap-2 rounded-md border-2 px-6 py-2 border-zinc-500 text-zinc-500 text-lg hover:text-blue-300 hover:border-blue-500"
+              className="flex gap-2 rounded-lg border-2 px-6 py-2 border-zinc-500 text-zinc-500 text-lg hover:text-blue-300 hover:border-blue-500"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -34,7 +38,7 @@ export function Profile() {
 
             <a
               href="http://github.com/thiago-NSampaio/"
-              className="flex gap-2 rounded-md border-2 px-6 py-2 border-zinc-500 text-zinc-500 text-lg hover:text-white hover:border-white"
+              className="flex gap-2 rounded-lg border-2 px-6 py-2 border-zinc-500 text-zinc-500 text-lg hover:text-white hover:border-white"
               target="_blank"
               rel="noopener noreferrer"
             >
