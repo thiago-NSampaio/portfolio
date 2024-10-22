@@ -54,7 +54,7 @@ export function ProjectCard({
       </div>
 
       <div className="flex py-2">
-        <ul className="flex flex-wrap gap-y-2 gap-1.5 *:text-center *:px-2.5 *:text-sm *:md:text-base md:*:px-3.5 *:py-1 *:rounded-xl">
+        <ul className="flex justify-stretch flex-wrap gap-y-2 gap-1.5 *:text-center *:px-2.5 *:text-sm *:md:text-sm md:*:px-3.5 *:py-1 *:rounded-xl">
           {techs.map((tech) => (
             <li
               key={tech.name}

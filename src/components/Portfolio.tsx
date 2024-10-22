@@ -1,11 +1,11 @@
 import { Section } from "./Section";
 
 import { Profile } from "./Profile";
-import { InstagramLogo } from "phosphor-react";
+import { InstagramLogo, WhatsappLogo } from "phosphor-react";
 import { Certificates } from "./Certificates";
 import { Projects } from "./Projects";
 import { useState, useEffect } from "react";
-import { Mail, Phone } from "lucide-react";
+import { Mail } from "lucide-react";
 import { BackToTop } from "./BackToTop";
 
 export function Portfolio() {
@@ -53,7 +53,7 @@ export function Portfolio() {
         <Section
           name="certificates"
           title="Certificados"
-          subtitle="Estes são os certificados que adquirem no meio tecnlógico de desenvolvimento para web."
+          subtitle="Certificações obtidas no campo de desenvolvimento web."
         >
           <Certificates />
         </Section>
@@ -63,9 +63,30 @@ export function Portfolio() {
           subtitle="Entre em contato comigo."
         >
           <div className="flex items-center justify-center pt-3 -mb-7 space-x-5">
-            <InstagramLogo className="size-10" />
-            <Mail className="size-10" />
-            <Phone className="size-10" />
+            <a
+              href="https://www.instagram.com/thiagu_nascimento/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-transparent"
+            >
+              <InstagramLogo className="w-12 h-12 rounded-lg hover:shadow-xl hover:shadow-fuchsia-400 transition-shadow duration-300" />
+            </a>
+            <a
+              href="mailto:thiagosampaio.d3v@gmail.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-transparent"
+            >
+              <Mail className="w-12 h-12 rounded-xl hover:shadow-xl hover:shadow-red-400 transition-shadow duration-300" />
+            </a>
+            <a
+              href="https://wa.me/5592985508380"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-transparent"
+            >
+              <WhatsappLogo className="w-12 h-12 rounded-full hover:shadow-xl hover:shadow-lime-400 transition-shadow duration-300" />
+            </a>
           </div>
         </Section>
       </div>
