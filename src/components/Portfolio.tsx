@@ -1,32 +1,18 @@
 import { Section } from "./Section";
 
 import { Profile } from "./Profile";
-import { InstagramLogo, WhatsappLogo } from "phosphor-react";
 import { Certificates } from "./Certificates";
 import { Projects } from "./Projects";
-import { useState, useEffect } from "react";
-import { Mail } from "lucide-react";
 import { BackToTop } from "./BackToTop";
+import { useScroll } from "../hooks/useScroll";
+import { SocialMedias } from "./SocialMedias";
 
 export function Portfolio() {
-  const [isScrolled, setIsScrolled] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 100);
-    };
-
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
+  const isScrolled = useScroll();
   return (
     <div className="items-center text-white flex flex-col">
       <Profile />
-
-      <div className="w-full px-3 h-full md:max-w-[1260px]">
+      <div className="w-full px-3 md:max-w-[1260px]">
         {isScrolled && <BackToTop />}
 
         <Section
@@ -62,32 +48,7 @@ export function Portfolio() {
           title="Contato"
           subtitle="Entre em contato comigo."
         >
-          <div className="flex items-center justify-center pt-3 -mb-7 space-x-5">
-            <a
-              href="https://www.instagram.com/thiagu_nascimento/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-transparent"
-            >
-              <InstagramLogo className="w-12 h-12 rounded-lg hover:shadow-xl hover:shadow-fuchsia-400 transition-shadow duration-300" />
-            </a>
-            <a
-              href="mailto:thiagosampaio.d3v@gmail.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-transparent"
-            >
-              <Mail className="w-12 h-12 rounded-xl hover:shadow-xl hover:shadow-red-400 transition-shadow duration-300" />
-            </a>
-            <a
-              href="https://wa.me/5592985508380"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-transparent"
-            >
-              <WhatsappLogo className="w-12 h-12 rounded-full hover:shadow-xl hover:shadow-lime-400 transition-shadow duration-300" />
-            </a>
-          </div>
+          <SocialMedias />
         </Section>
       </div>
     </div>
