@@ -11,7 +11,7 @@ export function SocialMedias() {
         className="bg-transparent"
         title="Instagram"
       >
-        <InstagramLogo className="w-12 h-12 text-zinc-300 hover:animate-bounce transition duration-200" />
+        <InstagramLogo className="w-12 h-12 text-zinc-300 hover:text-fuchsia-700 transition duration-200" />
       </a>
       <a
         href="mailto:thiagosampaio.d3v@gmail.com"
@@ -20,7 +20,7 @@ export function SocialMedias() {
         className="bg-transparent"
         title="Gmail"
       >
-        <Mail className="w-12 h-12 text-zinc-300 hover:animate-bounce transition duration-200" />
+        <Mail className="w-12 h-12 text-zinc-300 hover:text-red-600 transition duration-200" />
       </a>
       <a
         href="https://wa.me/5592985508380"
@@ -29,7 +29,7 @@ export function SocialMedias() {
         className="bg-transparent"
         title="WhatsApp"
       >
-        <WhatsappLogo className="w-12 h-12 text-zinc-300 hover:animate-bounce transition duration-200" />
+        <WhatsappLogo className="w-12 h-12 text-zinc-300 hover:text-teal-600 transition duration-200" />
       </a>
     </div>
   );

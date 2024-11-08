@@ -11,15 +11,15 @@ export function Certificates() {
           key={certificate.id}
           className="flex flex-shrink-0 group max-w-sm relative overflow-visible"
         >
-          <div className="h-72 flex relative z-10">
+          <div className="h-72 flex z-10">
             <img
               src={certificate.src}
               alt={certificate.name}
-              className="object-cover w-full h-full object-top rounded-xl"
+              className="object-cover p-2 w-full h-full object-top rounded-xl"
               draggable={false}
             />
           </div>
-          <div className="invisible absolute inset-0 bg-gradient-to-tr bg-zinc-900 bg-opacity-90 flex flex-col justify-center rounded-lg items-center z-10 scale-0 transition duration-300 group-hover:scale-100 group-hover:opacity-100 group-hover:visible">
+          <div className="invisible absolute inset-0 bg-gradient-to-tr bg-zinc-800  flex flex-col justify-center rounded-lg items-center z-10 scale-0 transition duration-300 group-hover:scale-100 group-hover:opacity-100 group-hover:visible">
             <span className="text-zinc-300 pt-2 text-lg font-bold">
               NLW Pocket Full Stack - Intermediário
             </span>
