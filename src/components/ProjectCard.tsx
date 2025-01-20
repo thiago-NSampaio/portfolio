@@ -58,7 +58,7 @@ export function ProjectCard({
           {techs.map((tech) => (
             <li
               key={tech.name}
-              className="flex gap-x-1.5 justify-center hover:shadow-md bg-zinc-950 border hover:cursor-default"
+              className="flex gap-x-1.5 justify-center items-center hover:shadow-md bg-zinc-950 border hover:cursor-default"
               style={{ borderColor: tech.color ? tech.color : "white" }}
             >
               <IconsTechs tech={tech.name} />
