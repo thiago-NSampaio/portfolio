@@ -1,5 +1,4 @@
 import { Section } from "./Section";
-
 import { Profile } from "./Profile";
 import { Certificates } from "./Certificates";
 import { Projects } from "./Projects";
@@ -11,9 +10,10 @@ export function Portfolio() {
   const isScrolled = useScroll();
   return (
     <div className="items-center text-white flex flex-col">
-      <Profile />
-      <div className="w-full px-3 md:max-w-[1260px]">
         {isScrolled && <BackToTop />}
+
+        <Profile />
+      <div className="w-full px-3 md:max-w-[80rem] space-y-8 md:space-y-16">
 
         <Section
           name="about"

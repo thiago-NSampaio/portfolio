@@ -1,12 +1,15 @@
 import { Row } from "./Row";
 import { SwiperSlide } from "swiper/react";
-import { SquareArrowUpRight } from "lucide-react";
+import { SquareArrowUpRight, Info, X } from "lucide-react";
 import { useEffect, useState } from "react";
 import { api } from "../lib/axios";
 import { Certificate } from "../types/Certificate";
 
 export function Certificates() {
   const [certificates, setCertificates] = useState<Certificate[]>([]);
+  const [selectedCertificate, setSelectedCertificate] = useState<string | null>(
+    null
+  );
 
   function setBackgroundAndShadowByInstitute(institute: string) {
     switch (institute) {
@@ -51,16 +54,35 @@ export function Certificates() {
             key={certificate.id}
             className="flex flex-shrink-0 group max-w-sm relative overflow-visible"
           >
-            <div className="h-72 flex z-10">
+            <div className="h-72 flex z-10 relative">
               <img
                 src={certificate.img}
                 alt={certificate.name}
                 className="object-cover p-2 w-full h-full object-top rounded-xl"
                 draggable={false}
               />
+              <button
+                onClick={() => setSelectedCertificate(certificate.id)}
+                className="absolute top-3 right-3 p-2 rounded-full transition-colors"
+              >
+                <Info className="w-6 h-6 bg-zinc-950/80 rounded-full text-white" />
+              </button>
             </div>
-            <div className="invisible absolute inset-0 bg-gradient-to-tr bg-zinc-800 flex flex-col justify-center rounded-lg items-center z-10 scale-0 transition duration-300 group-hover:object-cover group-hover:scale-100 group-hover:opacity-100 group-hover:visible">
-              <span className="text-teal-300 pt-2 text-md font-bold">
+            <div
+              className={`absolute inset-0 bg-gradient-to-tr bg-zinc-800 flex flex-col justify-center rounded-lg items-center z-10 transition duration-300
+              ${
+                selectedCertificate === certificate.id
+                  ? "visible opacity-100 scale-100"
+                  : "invisible opacity-0 scale-0"
+              }`}
+            >
+              <button
+                onClick={() => setSelectedCertificate(null)}
+                className="absolute top-1 right-1 p-2 rounded-full transition-colors"
+              >
+                <X className="w-6 h-6 text-white" />
+              </button>
+              <span className="text-orange-500 pt-2 text-md font-bold">
                 {certificate.name}
               </span>
               <span className="text-zinc-300 pt-2 text-lg font-bold">
@@ -78,7 +100,7 @@ export function Certificates() {
                 {certificate.year}
               </p>
               <a
-                className="flex pt-5 text-white font-medium text-lg gap-1 hover:text-teal-400"
+                className="flex pt-5 text-white font-medium text-lg gap-1 hover:text-orange-200"
                 href={certificate.link}
                 target="_blank"
               >

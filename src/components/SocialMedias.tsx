@@ -3,7 +3,7 @@ import { InstagramLogo, WhatsappLogo } from "phosphor-react";
 
 export function SocialMedias() {
   return (
-    <div className="flex items-center justify-center pt-3 -mb-7 space-x-5">
+    <div className="flex items-center justify-center mb-2 pt-3 space-x-5">
       <a
         href="https://www.instagram.com/thiagu_nascimento/"
         target="_blank"
@@ -29,7 +29,7 @@ export function SocialMedias() {
         className="bg-transparent"
         title="WhatsApp"
       >
-        <WhatsappLogo className="w-12 h-12 text-zinc-300 hover:text-teal-600 transition duration-200" />
+        <WhatsappLogo className="w-12 h-12 text-zinc-300 hover:text-orange-500 transition duration-200" />
       </a>
     </div>
   );

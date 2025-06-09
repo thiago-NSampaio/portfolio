@@ -30,7 +30,7 @@ export function NavLinks({ closeMenu, isDesktop, isMenuOpen }: NavLinksProps) {
         <Link
           to="home"
           className="p-2 transition ease-in-out hover:-translate-y-1 duration-300"
-          activeClass="text-teal-400"
+          activeClass="text-orange-400"
           spy={true}
           smooth={true}
           duration={500}
@@ -43,7 +43,7 @@ export function NavLinks({ closeMenu, isDesktop, isMenuOpen }: NavLinksProps) {
         <Link
           to="about"
           className="p-2 transition ease-in-out hover:-translate-y-1 duration-300"
-          activeClass="text-teal-400"
+          activeClass="text-orange-400"
           spy={true}
           smooth={true}
           duration={500}
@@ -56,7 +56,7 @@ export function NavLinks({ closeMenu, isDesktop, isMenuOpen }: NavLinksProps) {
         <Link
           to="projects"
           className="p-2 transition ease-in-out hover:-translate-y-1 duration-300"
-          activeClass="text-teal-400"
+          activeClass="text-orange-400"
           spy={true}
           smooth={true}
           duration={500}
@@ -69,7 +69,7 @@ export function NavLinks({ closeMenu, isDesktop, isMenuOpen }: NavLinksProps) {
         <Link
           to="certificates"
           className="p-2 transition ease-in-out hover:-translate-y-1 duration-300"
-          activeClass="text-teal-400"
+          activeClass="text-orange-400"
           spy={true}
           smooth={true}
           duration={500}
@@ -82,7 +82,7 @@ export function NavLinks({ closeMenu, isDesktop, isMenuOpen }: NavLinksProps) {
         <Link
           to="contact"
           className="p-2 transition ease-in-out hover:-translate-y-1 duration-300"
-          activeClass="text-teal-400"
+          activeClass="text-orange-400"
           spy={true}
           smooth={true}
           duration={500}

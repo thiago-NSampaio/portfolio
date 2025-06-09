@@ -21,10 +21,10 @@ export function ProjectCard({
 }: ProjectCardProps) {
   return (
     <div className="px-3 py-2 flex flex-col bg-gradient-to-r items-center from-neutral-800 to-neutral-900 max-w-sm rounded-xl overflow-hidden h-[480px] md:h-[520px]">
-      <div className="flex justify-between mt-2 font-bold">
-        <h3 className="text-xl text-start">{name}</h3>
+      <div className="flex justify-between font-bold">
+        <h3 className="text-xl text-center border-b border-zinc-500 w-56">{name}</h3>
       </div>
-      <p className="font-normal text-md mb-2">{description}</p>
+      <p className="font-normal text-md mt-2 mb-2">{description}</p>
       <div className="relative group w-full">
         <img
           alt={name}
