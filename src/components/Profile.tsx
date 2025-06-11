@@ -1,20 +1,37 @@
-import { Github, Linkedin } from "lucide-react";
+import { Github, Flame, Linkedin } from "lucide-react";
 import { getSaudation } from "../utils/getSaudation";
 import { Element } from "react-scroll";
+import { useState } from "react";
+import { StatsModal } from "./StatsModal";
 
 export function Profile() {
   const saudation = getSaudation();
+
+    const [isOpenModalStats, setIsOpenModalStats] = useState(false);
+
+  function openStatsModal() {
+    setIsOpenModalStats(true);
+  }
+
+  function closeStatsModal() {
+    setIsOpenModalStats(false);
+  }
   return (
     <Element
       className="bg-opacity-95 w-full h-full bg-gradient-to-b from-zinc-900 to-zinc-950"
       name="home"
     >
-      <div className="flex flex-col space-y-7 justify-center items-center top-50 h-full min-h-[42rem] mt-7 md:flex-row md:gap-3 md:space-y-0 md:min-h-[32rem]">
-        <img
-          className="flex flex-shrink-0 size-60 md:size-64 rounded-full border-4 p-1 border-orange-500"
-          // src="./profile.png"
-          alt=""
-        />
+      <div className="flex flex-col space-y-7 justify-center items-center h-full min-h-[42rem] md:flex-row md:gap-3 md:space-y-0 md:min-h-[32rem]">
+        <div className="relative">
+          <div className="absolute right-9 top-0">
+            <Flame className="w-10 h-10 icon-shadow-pulse" strokeLinecap="round" onClick={()=>openStatsModal()}/>
+          </div>
+          <img
+            className="flex flex-shrink-0 size-60 md:size-64 rounded-full border-4 p-1 border-orange-500"
+            // src="./i-ghibli.png"
+            alt=""
+          />
+        </div>
         <div className="m-0 p-0 items-center justify-content-center">
           <p className="flex flex-wrap justify-center text-4xl md:block font-bold md:text-5xl">
             {saudation}, sou{" "}
@@ -48,6 +65,7 @@ export function Profile() {
           </div>
         </div>
       </div>
+      {isOpenModalStats && (<StatsModal closeStatsModal={closeStatsModal}/>)}
     </Element>
   );
 }

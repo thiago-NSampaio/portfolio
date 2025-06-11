@@ -29,7 +29,7 @@ export function SocialMedias() {
         className="bg-transparent"
         title="WhatsApp"
       >
-        <WhatsappLogo className="w-12 h-12 text-zinc-300 hover:text-orange-500 transition duration-200" />
+        <WhatsappLogo className="w-12 h-12 text-zinc-300 hover:text-teal-500 transition duration-200" />
       </a>
     </div>
   );

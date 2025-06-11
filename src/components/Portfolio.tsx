@@ -10,11 +10,11 @@ export function Portfolio() {
   const isScrolled = useScroll();
   return (
     <div className="items-center text-white flex flex-col">
-        {isScrolled && <BackToTop />}
+      {isScrolled && <BackToTop />}
 
-        <Profile />
-      <div className="w-full px-3 md:max-w-[80rem] space-y-8 md:space-y-16">
+      <Profile />
 
+      <div className="w-full px-3 md:w-5/6 space-y-8 md:space-y-16">
         <Section
           name="about"
           title="Sobre"

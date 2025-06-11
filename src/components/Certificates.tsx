@@ -52,7 +52,7 @@ export function Certificates() {
         return (
           <SwiperSlide
             key={certificate.id}
-            className="flex flex-shrink-0 group max-w-sm relative overflow-visible"
+            className="flex flex-shrink-0 group max-w-sm overflow-visible"
           >
             <div className="h-72 flex z-10 relative">
               <img
@@ -63,9 +63,9 @@ export function Certificates() {
               />
               <button
                 onClick={() => setSelectedCertificate(certificate.id)}
-                className="absolute top-3 right-3 p-2 rounded-full transition-colors"
+                className="absolute top-3 right-3 p-2 rounded-full"
               >
-                <Info className="w-6 h-6 bg-zinc-950/80 rounded-full text-white" />
+                <Info className="w-7 h-7 bg-zinc-950/80 rounded-full text-white md:w-6 md:h-6" />
               </button>
             </div>
             <div
@@ -78,7 +78,7 @@ export function Certificates() {
             >
               <button
                 onClick={() => setSelectedCertificate(null)}
-                className="absolute top-1 right-1 p-2 rounded-full transition-colors"
+                className="absolute top-1 right-1 p-2 rounded-full"
               >
                 <X className="w-6 h-6 text-white" />
               </button>
