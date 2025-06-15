@@ -7,7 +7,7 @@ import { StatsModal } from "./StatsModal";
 export function Profile() {
   const saudation = getSaudation();
 
-    const [isOpenModalStats, setIsOpenModalStats] = useState(false);
+  const [isOpenModalStats, setIsOpenModalStats] = useState(false);
 
   function openStatsModal() {
     setIsOpenModalStats(true);
@@ -23,12 +23,15 @@ export function Profile() {
     >
       <div className="flex flex-col space-y-7 justify-center items-center h-full min-h-[42rem] md:flex-row md:gap-3 md:space-y-0 md:min-h-[32rem]">
         <div className="relative">
-          <div className="absolute right-9 top-0">
-            <Flame className="w-10 h-10 icon-shadow-pulse" strokeLinecap="round" onClick={()=>openStatsModal()}/>
+          <div className="absolute right-7 top-1 flex items-center justify-center">
+            <Flame
+              className="w-11 h-11 icon-shadow-pulse stroke-teal-500 fill-teal-900"
+              onClick={() => openStatsModal()}
+            />
           </div>
           <img
             className="flex flex-shrink-0 size-60 md:size-64 rounded-full border-4 p-1 border-orange-500"
-            // src="./i-ghibli.png"
+            src="profile-ghibli.png"
             alt=""
           />
         </div>
@@ -65,7 +68,7 @@ export function Profile() {
           </div>
         </div>
       </div>
-      {isOpenModalStats && (<StatsModal closeStatsModal={closeStatsModal}/>)}
+      {isOpenModalStats && <StatsModal closeStatsModal={closeStatsModal} />}
     </Element>
   );
 }
