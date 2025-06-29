@@ -33,7 +33,7 @@ export function StatsModal({ closeStatsModal }: StatsModalProps) {
   if (loading) {
     return (
       <Modal
-        titleModal="Meus índices nas linguagens e frameworks"
+        titleModal="Análise de Código no GitHub"
         subtitleModal=""
         closeModal={closeStatsModal}
       >
