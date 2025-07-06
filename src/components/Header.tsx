@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { Logo } from "./Logo";
 import { NavBar } from "./NavBar";
 import { useMediaQuery } from "react-responsive";
