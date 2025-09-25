@@ -9,7 +9,7 @@ interface NavLinksProps {
 
 export function NavLinks({ closeMenu, isDesktop, isMenuOpen }: NavLinksProps) {
   return (
-    <ul
+    <div
       className={
         isDesktop
           ? "flex flex-row space-x-5 text-lg text-zinc-300"
@@ -33,6 +33,8 @@ export function NavLinks({ closeMenu, isDesktop, isMenuOpen }: NavLinksProps) {
           activeClass="text-orange-400"
           spy={true}
           smooth={true}
+                    href="#"
+
           duration={500}
           onClick={closeMenu}
           offset={isDesktop ? -100 : -70}
@@ -46,6 +48,8 @@ export function NavLinks({ closeMenu, isDesktop, isMenuOpen }: NavLinksProps) {
           activeClass="text-orange-400"
           spy={true}
           smooth={true}
+                    href="#"
+
           duration={500}
           onClick={closeMenu}
           offset={isDesktop ? -100 : -70}
@@ -58,6 +62,8 @@ export function NavLinks({ closeMenu, isDesktop, isMenuOpen }: NavLinksProps) {
           className="p-2 transition ease-in-out hover:-translate-y-1 duration-300"
           activeClass="text-orange-400"
           spy={true}
+                    href="#"
+
           smooth={true}
           duration={500}
           onClick={closeMenu}
@@ -71,6 +77,7 @@ export function NavLinks({ closeMenu, isDesktop, isMenuOpen }: NavLinksProps) {
           className="p-2 transition ease-in-out hover:-translate-y-1 duration-300"
           activeClass="text-orange-400"
           spy={true}
+          href="#"
           smooth={true}
           duration={500}
           onClick={closeMenu}
@@ -86,6 +93,8 @@ export function NavLinks({ closeMenu, isDesktop, isMenuOpen }: NavLinksProps) {
           spy={true}
           smooth={true}
           duration={500}
+                    href="#"
+
           onClick={closeMenu}
           offset={isDesktop ? -100 : -70}
         >
@@ -101,6 +110,6 @@ export function NavLinks({ closeMenu, isDesktop, isMenuOpen }: NavLinksProps) {
           />
         </div>
       )}
-    </ul>
+    </div>
   );
 }

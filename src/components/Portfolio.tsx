@@ -22,7 +22,7 @@ export function Portfolio() {
         >
           <p className="flex items-center justify-center">
             <a href="https://skillicons.dev">
-              <img
+              <img alt="icons techs"
                 className="cursor-default"
                 src="https://skillicons.dev/icons?i=html,css,js,ts,react,php,nodejs,git,py,java"
               />

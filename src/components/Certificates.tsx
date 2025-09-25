@@ -62,10 +62,10 @@ export function Certificates() {
                 draggable={false}
               />
               <button
-                onClick={() => setSelectedCertificate(certificate.id)}
+                onClick={() => setSelectedCertificate(certificate.id)} aria-label="Info certicate"
                 className="absolute top-3 right-3 p-2 rounded-full"
               >
-                <Info className="w-7 h-7 bg-zinc-950/80 rounded-full text-white md:w-6 md:h-6" />
+                <Info className="w-7 h-7 bg-zinc-950/80 rounded-full text-white md:w-6 md:h-6"/>
               </button>
             </div>
             <div
