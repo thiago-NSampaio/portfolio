@@ -20,7 +20,7 @@ export function ProjectCard({
   techs,
 }: ProjectCardProps) {
   return (
-    <div className="flex flex-col bg-gradient-to-r items-center from-neutral-800 to-neutral-900 max-w-sm rounded-xl overflow-hidden h-[480px] md:h-[520px]">
+    <div className="flex flex-col bg-gradient-to-r items-center from-neutral-800 to-neutral-900 max-w-sm rounded-xl overflow-hidden h-[29.5rem] md:h-[520px]">
       <div className="flex-1 px-3 py-2">
         <div className="flex justify-center font-bold">
           <h3 className="text-xl text-center px-3 bg-neutral-700 rounded-full">

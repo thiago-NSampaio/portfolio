@@ -33,8 +33,7 @@ export function NavLinks({ closeMenu, isDesktop, isMenuOpen }: NavLinksProps) {
           activeClass="text-orange-400"
           spy={true}
           smooth={true}
-                    href="#"
-
+          href="/"
           duration={500}
           onClick={closeMenu}
           offset={isDesktop ? -100 : -70}
@@ -48,8 +47,7 @@ export function NavLinks({ closeMenu, isDesktop, isMenuOpen }: NavLinksProps) {
           activeClass="text-orange-400"
           spy={true}
           smooth={true}
-                    href="#"
-
+          href="about"
           duration={500}
           onClick={closeMenu}
           offset={isDesktop ? -100 : -70}
@@ -62,8 +60,7 @@ export function NavLinks({ closeMenu, isDesktop, isMenuOpen }: NavLinksProps) {
           className="p-2 transition ease-in-out hover:-translate-y-1 duration-300"
           activeClass="text-orange-400"
           spy={true}
-                    href="#"
-
+          href="/projects"
           smooth={true}
           duration={500}
           onClick={closeMenu}
@@ -77,7 +74,7 @@ export function NavLinks({ closeMenu, isDesktop, isMenuOpen }: NavLinksProps) {
           className="p-2 transition ease-in-out hover:-translate-y-1 duration-300"
           activeClass="text-orange-400"
           spy={true}
-          href="#"
+          href="/certificates"
           smooth={true}
           duration={500}
           onClick={closeMenu}
@@ -93,8 +90,7 @@ export function NavLinks({ closeMenu, isDesktop, isMenuOpen }: NavLinksProps) {
           spy={true}
           smooth={true}
           duration={500}
-                    href="#"
-
+          href="/contact"
           onClick={closeMenu}
           offset={isDesktop ? -100 : -70}
         >
