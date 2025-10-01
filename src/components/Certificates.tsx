@@ -43,7 +43,7 @@ export function Certificates() {
   }, []);
 
   return (
-    <Row sb={30}>
+    <Row sb={15}>
       {certificates.map((certificate) => {
         const { bg, shadow } = setBackgroundAndShadowByInstitute(
           certificate.institute

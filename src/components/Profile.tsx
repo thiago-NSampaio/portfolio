@@ -48,7 +48,7 @@ export function Profile() {
           <div className="flex justify-center py-4 space-x-5 items-center">
             <a
               href="http://linkedin.com/in/thiago-nascimentos/"
-              className="mobile-border-snake flex gap-2 rounded-lg px-6 py-2 text-zinc-500 text-lg hover:text-blue-300 md:border-2 md:border-zinc-500 md:px-5 md:py-3 md:text-xl md:gap-2"
+              className="flex gap-2 rounded-lg px-6 py-2 text-zinc-300 text-lg border-2 border-zinc-300 hover:text-white  md:px-5 md:py-3 md:text-xl md:gap-2"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -58,7 +58,7 @@ export function Profile() {
 
             <a
               href="http://github.com/thiago-NSampaio/"
-              className="mobile-border-snake flex gap-2 rounded-lg px-6 py-2 text-zinc-500 text-lg hover:text-white md:border-2 md:border-zinc-500 md:px-5 md:py-3 md:text-xl md:gap-2"
+              className="flex gap-2 rounded-lg px-6 py-2 text-zinc-300 text-lg border-2 border-zinc-300 hover:text-white  md:px-5 md:py-3 md:text-xl md:gap-2"
               target="_blank"
               rel="noopener noreferrer"
             >

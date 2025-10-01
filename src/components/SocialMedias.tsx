@@ -8,21 +8,21 @@ export function SocialMedias() {
       <SocialButton
         href="https://www.instagram.com/thiagu_nascimento/"
         title="Instagram"
-        gradient="from-pink-700 via-fuchsia-700 to-yellow-400"
+        gradient="from-zinc-500 via-zinc-100 to-zinc-600"
       >
         <InstagramLogo className="w-8 h-8" />
       </SocialButton>
       <SocialButton
         href="mailto:thiagosampaio.d3v@gmail.com"
         title="Gmail"
-        gradient="from-red-700 via-pink-700 to-yellow-500"
+        gradient="from-zinc-500 via-zinc-100 to-zinc-600"
       >
         <Mail className="w-8 h-8" />
       </SocialButton>
       <SocialButton
         href="https://wa.me/5592985508380"
         title="WhatsApp"
-        gradient="from-green-600 via-teal-700 to-emerald-500"
+        gradient="from-zinc-500 via-zinc-100 to-zinc-600"
       >
         <WhatsappLogo className="w-8 h-8" />
       </SocialButton>
